@@ -1,0 +1,97 @@
+<div id="divQuiz">
+    <h2>Quiz</h2>
+    <h3 id="quizQuestion"></h3>
+    <div id="divCenter">
+      <button id="btnAnswer1" type="button" class="btnAnswers"></button>
+      <button id="btnAnswer2" type="button" class="btnAnswers"></button>
+      <button id="btnAnswer3" type="button" class="btnAnswers"></button>
+    </div>
+    <br>
+    <button id="btnSubmit" type="button">Submit</button>
+    <br />
+    <a href="http://localhost:1313/game/" id="aPreviousPage">&lt;&lt; Go back</a
+    >
+    <a
+      id="aNextPage"
+      href="http://localhost:1313/game/p2"
+      >Next fountain &gt;&gt;</a
+    >
+    <br />
+  </div>
+
+
+
+<script>
+  var question = document.getElementById("quizQuestion");
+  var divQuiz = document.getElementById("divQuiz");
+  var btnAnswer1 = document.getElementById("btnAnswer1");
+  var btnAnswer2 = document.getElementById("btnAnswer2");
+  var btnAnswer3 = document.getElementById("btnAnswer3");
+  var btnSubmit = document.getElementById("btnSubmit");
+  var aNextPage = document.getElementById("aNextPage");
+
+  var isRightAnswer = null;
+
+  const Questions = [
+    {
+      id: 0,
+      q: "Wann wurde das Museum Schwab errichtet?",
+      a: [
+        { text: "In 1987", isCorrect: false },
+        { text: "In 1069", isCorrect: false },
+        { text: "In 1871", isCorrect: true },
+      ],
+    },
+  ];
+
+  question.innerHTML = Questions[0].q;
+  btnAnswer1.innerHTML = Questions[0].a[0].text;
+  btnAnswer2.innerHTML = Questions[0].a[1].text;
+  btnAnswer3.innerHTML = Questions[0].a[2].text;
+
+  btnAnswer1.addEventListener("click", () => {
+    isRightAnswer = Questions[0].a[0].isCorrect;
+    btnAnswer1.style.backgroundColor = "#4CAF50";
+    btnAnswer2.style.backgroundColor = "";
+    btnAnswer3.style.backgroundColor = "";
+    btnAnswer1.style.color = "white";
+    btnAnswer2.style.color = "";
+    btnAnswer3.style.color = "";
+  });
+
+
+  btnAnswer2.addEventListener("click", () => {
+    isRightAnswer = Questions[0].a[1].isCorrect;
+    btnAnswer1.style.backgroundColor = "";
+    btnAnswer2.style.backgroundColor = "#4CAF50";
+    btnAnswer3.style.backgroundColor = "";
+    btnAnswer1.style.color = "";
+    btnAnswer2.style.color = "white";
+    btnAnswer3.style.color = "";
+  });
+
+  btnAnswer3.addEventListener("click", () => {
+    isRightAnswer = Questions[0].a[2].isCorrect;
+    btnAnswer1.style.backgroundColor = "";
+    btnAnswer2.style.backgroundColor = "";
+    btnAnswer3.style.backgroundColor = "#4CAF50";
+    btnAnswer1.style.color = "";
+    btnAnswer2.style.color = "";
+    btnAnswer3.style.color = "white";
+  });
+
+  btnSubmit.addEventListener("click", () => {
+    if (isRightAnswer != null) {
+      if (isRightAnswer) {
+        alert("You got it!");
+        aNextPage.style.display = "block";
+      } else {
+        alert("Try again..");
+      }
+    } else {
+      alert("Please select an answer first!");
+    }
+  });
+</script>
+
+

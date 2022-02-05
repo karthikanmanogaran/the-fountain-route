@@ -1,0 +1,94 @@
+html {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 110%;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  body {
+    max-width: 30rem;
+    margin: 1rem auto;
+    border: solid black 1px;
+    padding: 10px;
+  }
+  
+  iframe {
+    width: 100%;
+  }
+  
+  main {
+    text-align: justify;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  #aNextPage {
+    display: none;
+    float: right;
+  }
+  
+  #aPreviousPage {
+    float: left;
+  }
+  
+  a {
+    color: black;
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #4caf50;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:active {
+      color: #4caf50;
+  }
+  
+  #divQuiz {
+    width: 100%;
+  }
+  
+  #divCenter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .btnAnswers {
+    margin: 5px;
+    width: 33%;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    background-color: #e7e7e7;
+    font-size: 16px;
+  }
+  
+  .btnAnswers:hover,
+  #btnSubmit:hover {
+    color: white;
+    background-color: #4caf50;
+  }
+  
+  #btnSubmit {
+    height: 50px;
+    width: 33%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    background-color: #e7e7e7;
+    font-size: 16px;
+  }
+  

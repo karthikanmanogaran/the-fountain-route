@@ -1,0 +1,26 @@
+baseURL: https://demohugo.netlify.app/
+languageCode: fr-ch
+title: Bachelor Thesis BFH
+
+Params:
+    footer: In collaboration with Biel/Bienne
+
+defaultContentLanguage: fr
+languageCode: fr-ch
+
+disableFastRender: true
+cleanDestinationDir: true
+removePathAccents: true
+
+disableKinds:
+  - RSS
+  - robotsTXT
+  - sitemap
+  - taxonomy
+  - term
+  - 404
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
